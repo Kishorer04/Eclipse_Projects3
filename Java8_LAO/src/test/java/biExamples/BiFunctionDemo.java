@@ -1,4 +1,4 @@
-package biFunction;
+package biExamples;
 
 import java.util.ArrayList;
 import java.util.Arrays;
