@@ -27,7 +27,9 @@ public class ForEachDemo {
 		Consumer<Integer> c = input -> System.out.println(input);
 		
 		l.forEach(c);
+		
 		//or
+		
 		l.forEach(input ->System.out.println(input));
 		
 		
