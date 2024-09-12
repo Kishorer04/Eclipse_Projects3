@@ -4,6 +4,20 @@ import java.util.function.Consumer;
 
 public class ConsumerDemo {
 	
+	
+	public void usingAnonymousClass() {
+		Consumer<String> c1 = new Consumer<String>() {
+
+			@Override
+			public void accept(String input) {
+             System.out.println(input + " is a word");
+			}
+			
+		};
+		
+		c1.accept("Nanri");
+	}
+	
 	public void usingLambda() {
 		
 		Consumer<String> con1 = input -> System.out.println(input+ " is a word");
@@ -16,6 +30,7 @@ public class ConsumerDemo {
 	public static void main(String[] args) {
 		ConsumerDemo c = new ConsumerDemo();
 		c.usingLambda();
+		c.usingAnonymousClass();
 		
 	}
 

@@ -6,12 +6,12 @@ public class AndThenComposeExample {
 	
 public static void main(String[] args) {
 	Function<String, String> tenth = str->{
-		                                  System.out.println("Study 10th first");
+		                                  System.out.println("Study 10th first "+ str);
 		                                   return "";
 	                                      };
 	                                      
 	 Function <String, String> eleventh = str->{
-		 										System.out.println("Study eleventh ");
+		 										System.out.println("Study eleventh "+str);
 		 									    return "";
 	                                          }; 
 	                                          

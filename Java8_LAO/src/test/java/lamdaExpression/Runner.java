@@ -29,7 +29,7 @@ public class Runner {
 	
 	public void usingLamda() {
 		
-		IPanchayat ipanchayat = question-> {return "Enna "+ question;};
+		IPanchayat ipanchayat = question -> {return "Enna "+ question;};
 		System.out.println(ipanchayat.interrogate("Ponna kaiya pudichu iluthiyaaa?"));
 		
 	}
