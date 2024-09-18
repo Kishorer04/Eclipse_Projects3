@@ -27,6 +27,9 @@ public class MapExample {
 	.map(String::length)
 	.forEach(System.out::println);
 	
+	names.stream()
+	.map(String::length)
+	.forEach(input -> System.out.println(input));
 	
 	// map() takes another function as a parameter. The output datatype depends on the return datatype of the 
 	// function inside the map function
