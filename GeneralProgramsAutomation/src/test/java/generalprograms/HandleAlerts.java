@@ -36,6 +36,7 @@ public class HandleAlerts {
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		driver.get("https://demoqa.com/alerts");
 		Thread.sleep(5000);
 		//handleWindows();
