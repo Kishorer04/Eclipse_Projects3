@@ -11,7 +11,7 @@ public class Runner {
 	}
 	
 	
-	public void usinAnonymousInnerClass() {
+	public void usingAnonymousInnerClass() {
 		
 		
 		Function<Integer,Double> function = new Function<Integer, Double>(){
@@ -63,7 +63,7 @@ public class Runner {
 	public static void main(String[] args) {
 		Runner runner = new Runner();
 		runner.usingClassicalWay();
-		runner.usinAnonymousInnerClass();
+		runner.usingAnonymousInnerClass();
 		runner.usingLambda();
 		runner.square();
 		runner.toUpper();
