@@ -17,23 +17,25 @@
 ## (Comments)
 #Sample Feature Definition Template
 ########################################################################
-#Can use Given also instead of And
 
+#Can use Given also instead of And
+#We can give the common steps in 'Background'. We can use Background only for common preconditions, cannot used for common post conditions
+#Background is similiar to @BeforeTest in TestNG. So the steps in Background will run before each Scenario.
 Feature: BookCart application demo
 
-  Scenario: Login should be success
+  Background: 
+    Given User should navigate to the application login
+    And User clicks on the login link
 
-    Given User should navigate to the application
-    And User clicks on the login link    
+
+  Scenario: Login should be success
     And User enter the username as "ortoni"
     And User enter the password as "pass1234"
     When User click the login button
     Then login should be success
 
+  @smoke
   Scenario: Login should be fail
-
-    Given User should navigate to the application
-    And User clicks on the login link
     And User enter the username as "kishore"
     And User enter the password as "passkishore"
     When User click the login button

@@ -16,14 +16,15 @@ public class LoginSteps {
 
 	WebDriver driver;
 
-	@Given("User should navigate to the application")
-	public void userShouldNavigateToTheApplication() {
-		driver = new ChromeDriver();
-		driver.get("https://bookcart.azurewebsites.net/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
-
+	
+	  @Given("User should navigate to the application login") 	
+	  public void userShouldNavigateToTheApplicationLogin() { 
+	  driver = new ChromeDriver();
+	  driver.get("https://bookcart.azurewebsites.net/");
+	  driver.manage().window().maximize();
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); }
+	
+	  
 	@Given("User clicks on the login link")
 	public void userClicksOnTheLoginLink() {
 
