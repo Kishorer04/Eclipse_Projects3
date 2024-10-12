@@ -1,28 +1,21 @@
 package steps;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import driver.DriverInstance;
 import io.cucumber.java.en.But;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginSteps {
-
-	WebDriver driver;
+public class LoginSteps extends DriverInstance {
 
 	
-	  @Given("User should navigate to the application login") 	
-	  public void userShouldNavigateToTheApplicationLogin() { 
-	  driver = new ChromeDriver();
-	  driver.get("https://bookcart.azurewebsites.net/");
-	  driver.manage().window().maximize();
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); }
+//	  @Given("User should navigate to the application login") 	
+//	  public void userShouldNavigateToTheApplicationLogin() { 
+//	
+//	  }
 	
 	  
 	@Given("User clicks on the login link")
@@ -55,7 +48,7 @@ public class LoginSteps {
 
 		String text = driver.findElement(By.xpath("(//span[@class='mdc-button__label'])[1]")).getText();
 		System.out.println(text);
-		driver.quit();
+
 
 	}
 	
@@ -76,7 +69,7 @@ public class LoginSteps {
 		
 		String text =driver.findElement(By.xpath("//mat-error[@id='mat-mdc-error-0']")).getText();
 	    Assert.assertEquals(text, "Username or Password is incorrect.");
-	    driver.quit();
+
 	}
 	
 	

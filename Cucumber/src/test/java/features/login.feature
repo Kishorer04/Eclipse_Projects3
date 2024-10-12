@@ -20,11 +20,13 @@
 
 #Can use Given also instead of And
 #We can give the common steps in 'Background'. We can use Background only for common preconditions, cannot used for common post conditions
-#Background is similiar to @BeforeTest in TestNG. So the steps in Background will run before each Scenario.
+#Background is similar to @BeforeTest in TestNG. So the steps in Background will run before each Scenario.
+#Background is only for feature file. While hooks are for multiple feature files
+
 Feature: BookCart application demo
 
   Background: 
-    Given User should navigate to the application login
+    #Given User should navigate to the application login
     And User clicks on the login link
 
 

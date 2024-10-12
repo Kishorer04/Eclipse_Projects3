@@ -1,8 +1,9 @@
 Feature: Bookcart application demo
 
-  Background: 
-    Given User should navigate to the application
+  #Background: 
+    #Given User should navigate to the application
 
+  @cleanup
   Scenario Outline: Add a product to the cart
     And User should login as "<username>" and "<password>"
     And user should search a "<book>"

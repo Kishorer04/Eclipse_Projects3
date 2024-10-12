@@ -1,27 +1,21 @@
 package steps;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import driver.DriverInstance;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class AddToCartSteps {
+public class AddToCartSteps extends DriverInstance {
 
-	WebDriver driver;
+
 	
-	@Given("User should navigate to the application")
-	public void userShouldNavigateToTheApplication() {
-		driver = new ChromeDriver();
-		driver.get("https://bookcart.azurewebsites.net/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
+//	@Given("User should navigate to the application")
+//	public void userShouldNavigateToTheApplication() {
+//		
+//	}
 
 	@Given("User should login as {string} and {string}")
 	public void userShouldLoginAsAnd(String username, String password) {
@@ -43,7 +37,8 @@ public class AddToCartSteps {
 	@When("User add the book to the cart")
 	public void userAddTheBookToTheCart() throws InterruptedException {
     Thread.sleep(5000);
-    driver.findElement(By.xpath("(//span[@class='mat-mdc-button-touch-target'])[7]//preceding-sibling::span[contains(text(),'Add to Cart')]")).click();
+//    driver.findElement(By.xpath("(//span[@class='mat-mdc-button-touch-target'])[6]//preceding-sibling::span[contains(text(),'Add to Cart')]")).click();
+    driver.findElement(By.xpath("(//span[@class='mat-mdc-button-touch-target'])[7]//preceding-sibling::span[2]")).click();
     Thread.sleep(4000);
 	}	
 
@@ -52,7 +47,7 @@ public class AddToCartSteps {
 
 		String text = driver.findElement(By.xpath("//span[@id='mat-badge-content-0']")).getText();
         Assert.assertEquals(Integer.parseInt(text)>0, true);
-        driver.quit();
+//        driver.quit();
 	}
 
 }
