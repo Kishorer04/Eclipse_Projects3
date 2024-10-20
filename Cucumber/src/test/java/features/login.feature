@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-########################################################################
+####################################################################################
 
 #Can use Given also instead of And
 #We can give the common steps in 'Background'. We can use Background only for common preconditions, cannot used for common post conditions

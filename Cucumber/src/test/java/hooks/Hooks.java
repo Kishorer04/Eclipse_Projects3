@@ -16,6 +16,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.Status;
 
 //General Rule: Hooks class cannot be extended by any class. But, Hooks can extend any class
 
@@ -28,7 +29,13 @@ public class Hooks extends DriverInstance {
 		  driver.get("https://bookcart.azurewebsites.net/");
 		  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
-		
+		  System.out.println("***ID***: "+scenario.getId());
+		  System.out.println("***Line***: "+scenario.getLine());
+		  System.out.println("***URI***: "+scenario.getUri());
+		  System.out.println("***Source tag name***: "+scenario.getSourceTagNames());
+          Status status = scenario.getStatus();
+          System.out.println("***Result***: "+ status);
+	
 	}
 	
 	@After(order=1)
@@ -42,6 +49,8 @@ public class Hooks extends DriverInstance {
 	byte[] scrnshotFile = scrnshot.getScreenshotAs(OutputType.BYTES);
 	scenario.attach(scrnshotFile, "image/png", "image.png");
 	}
+	Status status1 = scenario.getStatus();
+    System.out.println("***Result***: "+ status1);
 	driver.quit();
 	}
 	
