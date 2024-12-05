@@ -16,7 +16,7 @@ public class LoginSteps extends DriverInstance {
 //	  public void userShouldNavigateToTheApplicationLogin() { 
 //	
 //	  }
-	
+
 	  
 	@Given("User clicks on the login link")
 	public void userClicksOnTheLoginLink() {
@@ -75,12 +75,12 @@ public class LoginSteps extends DriverInstance {
 	
 	@Given("User enter the username as {string}")
 	public void userEnterTheUsernameAs(String username) {
-	driver.findElement(By.xpath("(//input[@id='mat-input-0'])[1]")).sendKeys(username);
+		driver.findElement(By.xpath("(//input[@id='mat-input-0'])[1]")).sendKeys(username);
 				
 	}
 	@Given("User enter the password as {string}")
 	public void userEnterThePasswordAs(String password) {
-	driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
+		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
 		  
 	}
 

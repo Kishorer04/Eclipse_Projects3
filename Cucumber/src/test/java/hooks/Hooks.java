@@ -21,6 +21,7 @@ import io.cucumber.java.Status;
 //General Rule: Hooks class cannot be extended by any class. But, Hooks can extend any class
 
 public class Hooks extends DriverInstance {
+	
 
 	@Before
 	public void beforeScenario(Scenario scenario)
@@ -51,7 +52,7 @@ public class Hooks extends DriverInstance {
 	}
 	Status status1 = scenario.getStatus();
     System.out.println("***Result***: "+ status1);
-	driver.quit();
+    driver.quit();
 	}
 	
 	

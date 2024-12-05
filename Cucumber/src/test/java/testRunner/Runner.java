@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 		          snippets =  SnippetType.CAMELCASE, //to get the snippets(methods) in CamelCase. By default it will come with underscore.
 		          monochrome = true, // to remove junk characters in the console	
 		          plugin = {"pretty",       //for more details in the console
-		        		    "html:Reports", //for html report
+		        		    "html:Reports/Reports.html", //for html report
 		        		   } 
 		          
 //		          tags= "@smoke or @regression"
@@ -22,7 +22,5 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 
 
 public class Runner extends AbstractTestNGCucumberTests{
-	
-	
 
 }
