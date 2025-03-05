@@ -10,7 +10,7 @@ public class ClassB extends ClassA{
 	public static void main(String[] args) {
 		
 		
-		//ClassB classb = new ClassB();
+		ClassB classb = new ClassB();
 		ClassA classa = new ClassB();
 		
 
